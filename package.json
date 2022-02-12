@@ -1,0 +1,23 @@
+{
+  "name": "waypoints",
+  "version": "1.0.0",
+  "description": "A mk48.io mod that tracks player movement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fork48-project/waypoints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fork48-project/waypoints/issues"
+  },
+  "homepage": "https://github.com/fork48-project/waypoints#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-ws": "^5.0.2"
+  }
+}
