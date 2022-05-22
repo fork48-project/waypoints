@@ -16,6 +16,7 @@ app.ws("/ws", function(ws, req) {
 	}
 
 	connections++;
+	console.log("Connections:", connections);
 
 	const sessionID = crypto.randomBytes(16).toString("hex");
 
