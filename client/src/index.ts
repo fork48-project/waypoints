@@ -2,7 +2,18 @@ let globalObject = (window as any);
 
 globalObject.waypoints = globalObject.waypoints ?? {server: "ws://localhost:8080/ws"};
 
+// Replace branding
+
 document.title += " + waypoints";
+
+let newImage = document.createElement("img");
+
+newImage.src = "https://raw.githubusercontent.com/fork48-project/waypoints/main/assets/logo.svg";
+newImage.id = "svg57";
+
+document.getElementById("svg57").replaceWith(newImage);
+
+// Networking
 
 globalObject._waypoints_socket = new WebSocket(globalObject.waypoints.server);
 
