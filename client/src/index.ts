@@ -4,14 +4,27 @@ globalObject.waypoints = globalObject.waypoints ?? {server: "ws://localhost:8080
 
 // Replace branding
 
-document.title += " + waypoints";
+const replaceBranding = () => {
+	if (!document.title.endsWith(" + waypoints")) {
+		document.title += " + waypoints";
+	}
 
-let newImage = document.createElement("img");
+	if (document.getElementById("svg57")) {
+		if (document.getElementById("svg57").tagName == "img") {
+			return; // Don't do anything if the logo has already been replaced
+		}
 
-newImage.src = "https://raw.githubusercontent.com/fork48-project/waypoints/main/assets/logo.svg";
-newImage.id = "svg57";
+		let newImage = document.createElement("img");
 
-document.getElementById("svg57").replaceWith(newImage);
+		newImage.src = "https://raw.githubusercontent.com/fork48-project/waypoints/main/assets/logo.svg";
+		newImage.id = "svg57";
+
+		document.getElementById("svg57").replaceWith(newImage);
+	}
+};
+
+setInterval(replaceBranding, 1000);
+replaceBranding();
 
 // Networking
 
