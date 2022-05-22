@@ -1,0 +1,29 @@
+{
+  "name": "waypoints-client",
+  "version": "0.0.1",
+  "description": "A mk48.io mod that tracks player movement.",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=iife --platform=browser --outfile=dist/waypoints.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fork48-project/waypoints.git"
+  },
+  "author": "thatretrodev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fork48-project/waypoints/issues"
+  },
+  "homepage": "https://github.com/fork48-project/waypoints#readme",
+  "keywords": [
+    "mk48",
+    "mk48io",
+    "fork48",
+    "waypoints"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.14.39"
+  }
+}
